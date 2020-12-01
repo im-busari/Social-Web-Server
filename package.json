@@ -1,0 +1,38 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "A classic REST API similar to a social network",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
+    "rotating-file-stream": "^2.1.3",
+    "sequelize": "^6.3.5",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.8.1",
+    "mocha": "^8.1.3",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "set NODE_ENV=development&& nodemon server.js",
+    "pretest": "set NODE_ENV=test&& sequelize db:migrate:undo:all&& sequelize db:migrate&& sequelize db:seed:all",
+    "test": "set NODE_ENV=test&& mocha '***/test/**/*.js' --exit",
+    "linter": "eslint --ignore-path .gitignore ."
+  },
+  "author": "Immanuella Busari",
+  "license": "ISC"
+}

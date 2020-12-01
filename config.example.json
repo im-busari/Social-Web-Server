@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "DB_USERNAME_DEVELOPMENT",
+    "password": "DB_PASSWORD_DEVELOPMENT",
+    "database": "social_network_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false
+  },
+  "test": {
+    "username": "DB_USERNAME_TEST",
+    "password": "DB_PASSWORD_TEST",
+    "database": "social_network_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false
+  },
+  "production": {
+    "username": "DB_USERNAME_PRODUCTION",
+    "password": "DB_PASSWORD_PRODUCTION",
+    "database": "social_network_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false
+  }
+}
